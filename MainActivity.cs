@@ -14,8 +14,8 @@ namespace TimeChunkV0_1
     public class MainActivity : AppCompatActivity
     {
         //Defination of Helloworld related variable. -E129
-        EditText nameEditText;
-        Button helloButton;
+        EditText emailEditText, passwordEditText;
+        Button signinButton, registerButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,21 +26,28 @@ namespace TimeChunkV0_1
 
             //Search for the values of EditText and Button from xml files as it is 
             //not simply linked similar to Forms application. -E129 T3.05
-            nameEditText = FindViewById<EditText>(Resource.Id.nameEditText);
-            helloButton = FindViewById<Button>(Resource.Id.helloButton);
+            emailEditText = FindViewById<EditText>(Resource.Id.emailEditText);
+            passwordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
+            signinButton = FindViewById<Button>(Resource.Id.signinButton);
+            registerButton = FindViewById<Button>(Resource.Id.registerButton);
 
-            //Linking the button clinked event with event handler. -E129 T6.05
-            helloButton.Click += HelloButton_Click;
+            //Linking the button clinked event with event handler. -E133 T5.50
+            signinButton.Click += SigninButton_Click;
+            registerButton.Click += RegisterButton_Click;
         }
 
-        //Event handler for Hello Butoon Clicked Event.  -E129 T6.05 
-        private vo
-            
-            
-            HelloButton_Click(object sender, EventArgs e)
+        private void RegisterButton_Click(object sender, EventArgs e)
         {
-            //Displaying a Toast Message. -E129 T6.30
-            Toast.MakeText(this, $"Hello {nameEditText.Text}", ToastLength.Long).Show();
+            //Going to the Register Activiy Page. -E135 T2.00
+            var intent = new Intent(this, typeof(RegisterActivity));
+            //Pass tyoed Email to intent which needs to be delivered to register activity. -E136 T1.00
+            intent.PutExtra("Email", emailEditText.Text);
+            StartActivity(intent);
+        }
+
+        private void SigninButton_Click(object sender, EventArgs e)
+        {
+            
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

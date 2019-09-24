@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <EditText
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/emailEditText"
-        android:hint="Email" />
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/registerEmailEditText"
+        android:hint="Email Address" />
     <EditText
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/passwordEditText"
+        android:id="@+id/registerPasswordEditText"
         android:hint="Password" />
-    <Button
-        android:text="Sign In"
+    <EditText
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signinButton"/>
+        android:id="@+id/confirmEditText"
+        android:hint="Confirm Password" />
     <Button
         android:text="Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/registerButton"/>
+        android:id="@+id/registerUserButton" />
+
 </LinearLayout>
