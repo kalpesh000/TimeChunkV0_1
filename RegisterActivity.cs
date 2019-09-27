@@ -21,7 +21,7 @@ namespace TimeChunkV0_1
         {
             base.OnCreate(savedInstanceState);
 
-            // Set Register View in layout folder as Content view for "RegisterAtivity.cs". -E134 T4.25
+            // Set Register View in layout folder as Content view for "RegisterActivity.cs". -E134 T4.25
             SetContentView(Resource.Layout.Register);
 
             //Link the variables with the xml file respective data. -E134 T5.22

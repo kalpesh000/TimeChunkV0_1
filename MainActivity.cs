@@ -47,7 +47,22 @@ namespace TimeChunkV0_1
 
         private void SigninButton_Click(object sender, EventArgs e)
         {
-            
+            var email = emailEditText.Text;
+            var password = passwordEditText.Text;
+
+            bool isEmailEmpty = string.IsNullOrEmpty(email);
+            bool isPasswordEmpty = string.IsNullOrEmpty(password);
+
+            if (isEmailEmpty || isPasswordEmpty)
+            {
+                Toast.MakeText(this, "Try Again..!!!", ToastLength.Long).Show();
+            }
+            else
+            {
+                Toast.MakeText(this, "Welcome", ToastLength.Long).Show();
+                var intent = new Intent(this, typeof(ProjectsActivity));
+                StartActivity(intent);
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
