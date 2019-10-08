@@ -31,7 +31,7 @@ namespace TimeChunkV0_1
             signinButton = FindViewById<Button>(Resource.Id.signinButton);
             registerButton = FindViewById<Button>(Resource.Id.registerButton);
 
-            //Linking the button clinked event with event handler. -E133 T5.50
+            //Linking the button clicked event with event handler. -E133 T5.50
             signinButton.Click += SigninButton_Click;
             registerButton.Click += RegisterButton_Click;
         }
@@ -40,7 +40,7 @@ namespace TimeChunkV0_1
         {
             //Going to the Register Activiy Page. -E135 T2.00
             var intent = new Intent(this, typeof(RegisterActivity));
-            //Pass tyoed Email to intent which needs to be delivered to register activity. -E136 T1.00
+            //Pass typed Email to intent which needs to be delivered to register activity. -E136 T1.00
             intent.PutExtra("Email", emailEditText.Text);
             StartActivity(intent);
         }
@@ -62,6 +62,9 @@ namespace TimeChunkV0_1
                 Toast.MakeText(this, "Welcome", ToastLength.Long).Show();
                 var intent = new Intent(this, typeof(ProjectsActivity));
                 StartActivity(intent);
+                //Remove the Login Page activity from the stack so user cannot go 
+                //back to the Login Page onces entered in the app. -E156 T2.00
+                Finish();
             }
         }
 

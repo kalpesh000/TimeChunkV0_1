@@ -64,6 +64,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveFragment.cs" />
+    <Compile Include="CompletedFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="ProjectsActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
@@ -156,6 +158,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Projects.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Active.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Completed.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
