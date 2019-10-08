@@ -19,6 +19,7 @@ namespace TimeChunkV0_1
     public class ProjectsActivity : Android.Support.V4.App.FragmentActivity
     {
         TabLayout tabLayout;
+        Android.Support.V7.Widget.Toolbar projectToolbar;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,12 +27,34 @@ namespace TimeChunkV0_1
             // Set Projects View in layout folder as Content view for "ProjectsActivity.cs". -E154 T4.30
             SetContentView(Resource.Layout.Projects);
 
+            //Get the Toolbar id from the resources. -E157 T4.00
+            projectToolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.projectsToolbar);
+
             //Get tabs Id and create Tab selected event to change conent. -E155 T10.30
             tabLayout = FindViewById<TabLayout>(Resource.Id.projectTabLayout);
             tabLayout.TabSelected += TabLayout_TabSelected;
 
+            //Create clicked event on the toolbar. -E157 T9.00
+            projectToolbar.InflateMenu(Resource.Menu.projectsMenu);
+            projectToolbar.MenuItemClick += ProjectToolbar_MenuItemClick;
+
             //Default display Active Fragement when activity is displayed. -E155 T12.20
             FragmentNavigate(new ActiveFragment());
+        }
+
+        private void ProjectToolbar_MenuItemClick(object sender, Android.Support.V7.Widget.Toolbar.MenuItemClickEventArgs e)
+        {
+            //Check if the settings is clicked.
+            if(e.Item.ItemId == Resource.Id.action_settings)
+            {
+                StartActivity(typeof(SettingsActivity));
+            }
+
+            //Check if the notification is clicked.
+            else if (e.Item.ItemId == Resource.Id.action_notifications)
+            {
+                StartActivity(typeof(NotificationsActivity));
+            }
         }
 
         private void TabLayout_TabSelected(object sender, TabLayout.TabSelectedEventArgs e)
