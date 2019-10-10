@@ -20,6 +20,9 @@ namespace TimeChunkV0_1
     {
         TabLayout tabLayout;
         Android.Support.V7.Widget.Toolbar projectToolbar;
+
+        //Bottom Menu help : https://devblogs.microsoft.com/xamarin/exploring-androids-bottom-navigation-view/
+        Android.Support.Design.Widget.BottomNavigationView projectBottomNavigation;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,6 +32,7 @@ namespace TimeChunkV0_1
 
             //Get the Toolbar id from the resources. -E157 T4.00
             projectToolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.projectsToolbar);
+            projectBottomNavigation = FindViewById<Android.Support.Design.Widget.BottomNavigationView>(Resource.Id.projectbottom_navigation);
 
             //Get tabs Id and create Tab selected event to change conent. -E155 T10.30
             tabLayout = FindViewById<TabLayout>(Resource.Id.projectTabLayout);
@@ -37,6 +41,9 @@ namespace TimeChunkV0_1
             //Create clicked event on the toolbar. -E157 T9.00
             projectToolbar.InflateMenu(Resource.Menu.projectsMenu);
             projectToolbar.MenuItemClick += ProjectToolbar_MenuItemClick;
+
+            //Bind the Bottom Navigatoin Menu page with the Project UI
+            projectBottomNavigation.InflateMenu(Resource.Menu.projectBottomNavigation);
 
             //Default display Active Fragement when activity is displayed. -E155 T12.20
             FragmentNavigate(new ActiveFragment());
