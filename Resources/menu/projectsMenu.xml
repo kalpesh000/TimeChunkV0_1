@@ -6,12 +6,12 @@
   <item android:id="@+id/action_notifications"
     app:showAsAction="always"
     android:icon="@mipmap/ic_action_notifications"
-    android:text="Notifications"/>
+    android:title="Notifications"/>
   
   <item android:id="@+id/action_settings"
     app:showAsAction="always"
     android:icon="@mipmap/ic_action_settings"
-    android:text="Settings"/>
+    android:title="Settings"/>
   
 </menu>
 
