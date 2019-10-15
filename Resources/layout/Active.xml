@@ -1,15 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Active"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+
+    <!-- Project First Group -->
+    <CheckBox
+        android:text="Project First"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/firstCheckBox" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstButton"
+        android:layout_toRightOf="@+id/firstCheckBox"/>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/textView1" />
+        android:id="@+id/firstProgressBar"
+        android:layout_below="@+id/firstCheckBox"/>
+    
+    <!-- Project Second Group -->
+    <CheckBox
+        android:text="Project Second"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:layout_below="@+id/firstProgressBar"
+        android:id="@+id/secondCheckBox" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondButton"
+        android:layout_below="@+id/firstProgressBar"
+        android:layout_toRightOf="@+id/secondCheckBox" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondProgressBar"
+        android:layout_below="@+id/secondCheckBox"/>
+    
+    <!-- Project Third Group -->
+    <CheckBox
+        android:text="Project Third"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:layout_below="@+id/secondProgressBar"
+        android:id="@+id/thirdCheckBox" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdButton"
+        android:layout_below="@+id/secondProgressBar"
+        android:layout_toRightOf="@+id/thirdCheckBox" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdProgressBar"
+        android:layout_below="@+id/thirdCheckBox"/>
+    
+    <!-- Future project button -->
+    <Button
+        android:text="Future Projects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/futureButton"/>
 
-</LinearLayout>
+</RelativeLayout>
+

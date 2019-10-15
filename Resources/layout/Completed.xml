@@ -1,15 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Completed"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+
+    <RelativeLayout
+        android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:id="@+id/textView1" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1">
 
-</LinearLayout>
+    <CheckBox
+        android:text="CheckBox 1"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox1" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_toRightOf="@+id/checkBox1"/>
+
+    <CheckBox
+        android:text="CheckBox 2"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox2" 
+        android:layout_below="@+id/checkBox1"/>
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_toRightOf="@+id/checkBox2"
+        android:layout_below="@+id/checkBox1"/>
+
+     <CheckBox
+        android:text="CheckBox 3"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox3" 
+        android:layout_below="@+id/checkBox2"/>
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_toRightOf="@+id/checkBox3"
+        android:layout_below="@+id/checkBox2"/>
+
+    <CheckBox
+        android:text="CheckBox 4"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox4" 
+        android:layout_below="@+id/checkBox3"/>
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_toRightOf="@+id/checkBox4"
+        android:layout_below="@+id/checkBox3"/>
+
+    <CheckBox
+        android:text="CheckBox 5"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox5" 
+        android:layout_below="@+id/checkBox4"/>
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_toRightOf="@+id/checkBox5"
+        android:layout_below="@+id/checkBox4"/>
+
+    <CheckBox
+        android:text="CheckBox 6"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox6" 
+        android:layout_below="@+id/checkBox5"/>
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:layout_toRightOf="@+id/checkBox6"
+        android:layout_below="@+id/checkBox5"/>
+
+    <CheckBox
+        android:text="CheckBox 7"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox7"
+        android:layout_below="@+id/checkBox6" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:layout_toRightOf="@+id/checkBox7"
+        android:layout_below="@+id/checkBox6"/>
+
+    <CheckBox
+        android:text="CheckBox 8"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox8"
+        android:layout_below="@+id/checkBox7" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:layout_toRightOf="@+id/checkBox8"
+        android:layout_below="@+id/checkBox7"/>
+
+    <CheckBox
+        android:text="CheckBox 9"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox9"
+        android:layout_below="@+id/checkBox8" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button9"
+        android:layout_toRightOf="@+id/checkBox9"
+        android:layout_below="@+id/checkBox8"/>
+
+    <CheckBox
+        android:text="CheckBox 10"
+        android:layout_width="243.7dp"
+        android:layout_height="47.0dp"
+        android:id="@+id/checkBox10"
+        android:layout_below="@+id/checkBox9" />
+    <Button
+        android:text="OnePager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button10"
+        android:layout_toRightOf="@+id/checkBox10"
+        android:layout_below="@+id/checkBox9"/>
+    </RelativeLayout>
+
+</ScrollView>
