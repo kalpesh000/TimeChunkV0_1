@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="ActiveFragment.cs" />
     <Compile Include="CompletedFragment.cs" />
+    <Compile Include="futureProjectsActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NotificationsActivity.cs" />
     <Compile Include="ProjectsActivity.cs" />
@@ -281,6 +282,30 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\projectBottomNavigation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="viewmodels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\futureProjects.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -68,13 +68,27 @@
         android:id="@+id/thirdProgressBar"
         android:layout_below="@+id/thirdCheckBox"/>
     
-    <!-- Future project button -->
+    <!-- Add button to add the projects -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_action_add"
+        android:layout_above="@+id/futureButton"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"/>
+
+    <!-- Future project button  -->
     <Button
         android:text="Future Projects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/space1"
         android:id="@+id/futureButton"/>
-
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>
 

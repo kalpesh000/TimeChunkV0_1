@@ -21,15 +21,27 @@ namespace TimeChunkV0_1
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your fragment here
+            // Create your fragment herevar
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-
             //The Inflate method is does similar stuff to setContentView which we have in Activity. E155 T6.50
-            return inflater.Inflate(Resource.Layout.Active, container, false);
+            View view = inflater.Inflate(Resource.Layout.Active, container, false);
+
+            //Adding a Button Click Event
+            Button futureButton = view.FindViewById<Button>(Resource.Id.futureButton);
+            futureButton.Click += FutureProjectButton_Click;
+
+            //Return your custom view for this Fragment
+            return view;
+        }
+
+        private void FutureProjectButton_Click(object sender, EventArgs e)
+        {
+            //Jumping to the Future Projects Activity inside Button Click event
+            var intent = new Intent(Activity, typeof(futureProjectsActivity));
+            StartActivity(intent);
         }
     }
 }
