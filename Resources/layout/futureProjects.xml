@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/projectsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"/>
+
     <TextView
         android:text="Future Projects"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1"
+        android:layout_below="@+id/projectsToolbar"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:gravity="center" />
 
-</LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/futureEditText"
+        android:layout_below="@+id/textView1"
+        android:hint="Enter Project Name" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/futureListView"
+        android:layout_below="@+id/futureEditText"
+        android:minHeight="25dp"
+        android:minWidth="25dp"/>
+
+    <!-- Add button to add the projects -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_action_add"
+        android:layout_above="@+id/projectbottom_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/projectbottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:elevation="16dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@layout/nav_item_color_state"
+        app:itemTextColor="@layout/nav_item_color_state"
+    />
+</RelativeLayout>

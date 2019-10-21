@@ -68,9 +68,11 @@
     <Compile Include="CompletedFragment.cs" />
     <Compile Include="futureProjectsActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="models\ProjectsDB.cs" />
     <Compile Include="NotificationsActivity.cs" />
     <Compile Include="ProjectsActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
+    <Compile Include="Resources\DataHelper\projectDatabase.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsActivity.cs" />
@@ -107,6 +109,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.6.292</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Arch.Core.Common">
       <Version>1.1.1.3</Version>
     </PackageReference>
@@ -284,7 +289,6 @@
     <AndroidResource Include="Resources\menu\projectBottomNavigation.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="models\" />
     <Folder Include="viewmodels\" />
   </ItemGroup>
   <ItemGroup>
